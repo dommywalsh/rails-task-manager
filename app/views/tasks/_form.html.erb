@@ -1,7 +1,9 @@
-<%= form_with model: task do |f| %>
+<%= form_with model: @task do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :details %>
   <%= f.text_field :details %>
+  <%= check_box_tag(:completed, true) %>
+  <%= label_tag(:completed, "Task completed") %>
   <%= f.submit %>
 <% end %>
